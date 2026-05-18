@@ -35,7 +35,6 @@ export default function Home() {
       <Overview />
       <Highlights setIsOpen={setIsOpen} />
       {/* <Gallery setIsOpen={setIsOpen} /> */}
-      <VirtualTour setIsOpen={setIsOpen} />
       <CarouselSection setIsOpen={setIsOpen} />
       <Amenities setIsOpen={setIsOpen} />
       {/* <ExclusiveAmenities /> */}
@@ -46,6 +45,7 @@ export default function Home() {
       <MasterPlan setIsOpen={setIsOpen} />
       {/* <PaymentPlan setIsOpen={setIsOpen} /> */}
       <AboutDeveloper setIsOpen={setIsOpen} />
+      <VirtualTour setIsOpen={setIsOpen} />
       <Footer />
       <EnquireModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
