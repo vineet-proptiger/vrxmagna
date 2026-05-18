@@ -367,7 +367,7 @@
   .btn-brand {
     background: var(--color-brand);
     color: #fff;
-    border: none;
+    border: 2px solid var(--color-brand) !important;
     padding: 14px 32px;
     display: inline-flex;
     align-items: center;
@@ -379,12 +379,15 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease !important;
     white-space: nowrap;
   }
 
   .btn-brand:hover {
-    background: var(--color-brand-hover) !important;
+    background: #ffffff !important;
+    color: var(--color-brand) !important;
+    border-color: var(--color-brand) !important;
+    transform: translateY(-3px);
   }
 
   /* ══ FLOATING TAB ══ */
@@ -408,6 +411,7 @@
   }
 
   .btn-floating-tab:hover {
+    transform: translateY(-50%) rotate(0deg) !important;
     background: #ffffff !important;
     color: var(--color-brand) !important;
     filter: drop-shadow(-6px 0 20px rgba(169, 38, 45, 0.35));
