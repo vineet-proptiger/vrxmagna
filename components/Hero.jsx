@@ -15,45 +15,127 @@ const Hero = ({ setIsOpen }) => {
   }, [])
 
   return (
-    <section style={{
-      position: 'relative',
-      marginTop: '80px',
-      height: 'max(calc(100vh - 80px), 56.25vw)',
-      minHeight: '520px',
-      overflow: 'hidden',
-      background: '#1a1a1a',
-    }}>
+    <section className="hero-container">
+      <style>{`
+        .hero-container {
+          position: relative;
+          margin-top: 80px;
+          height: max(calc(100vh - 80px), 56.25vw);
+          min-height: 520px;
+          overflow: hidden;
+          background: #1a1a1a;
+          display: block;
+        }
+
+        .hero-carousel {
+          position: absolute;
+          inset: 0;
+        }
+
+        .hero-gradient {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 45%;
+          background: linear-gradient(to top, rgba(169,38,45,0.82) 0%, rgba(169,38,45,0.45) 40%, rgba(169,38,45,0.10) 75%, transparent 100%);
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .hero-bottom-row {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-bottom: 28px;
+          z-index: 10;
+        }
+
+        .hero-dots {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 8px;
+          z-index: 10;
+          bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+          .hero-container {
+            margin-top: 0px !important;
+            padding-top: 80px !important;
+            height: auto !important;
+            min-height: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            background: #111827 !important;
+          }
+
+          .hero-carousel {
+            position: relative !important;
+            width: 100% !important;
+            aspect-ratio: 16/9 !important;
+            height: auto !important;
+            inset: auto !important;
+          }
+
+          .hero-gradient {
+            display: none !important;
+          }
+
+          .hero-bottom-row {
+            position: static !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            padding: 24px 20px 32px !important;
+            background: #111827 !important;
+            gap: 20px !important;
+          }
+
+          .hero-dots {
+            position: static !important;
+            transform: none !important;
+            justify-content: center !important;
+            padding: 12px 0 0 !important;
+            background: #111827 !important;
+            bottom: auto !important;
+          }
+        }
+      `}</style>
 
       {/* ── Image Carousel ── */}
-      {slides.map((src, idx) => (
-        <div key={idx} style={{
-          position: 'absolute', inset: 0,
-          opacity: current === idx ? 1 : 0,
-          transition: 'opacity 1s ease',
-        }}>
-          <Image
-            src={src}
-            alt={`VRX MAGNA ${idx + 1}`}
-            fill
-            className="object-cover"
-            priority={idx === 0}
-            sizes="100vw"
-          />
-        </div>
-      ))}
+      <div className="hero-carousel">
+        {slides.map((src, idx) => (
+          <div key={idx} style={{
+            position: 'absolute', inset: 0,
+            opacity: current === idx ? 1 : 0,
+            transition: 'opacity 1s ease',
+          }}>
+            <Image
+              src={src}
+              alt={`VRX MAGNA ${idx + 1}`}
+              fill
+              className="object-cover"
+              priority={idx === 0}
+              sizes="100vw"
+            />
+          </div>
+        ))}
+      </div>
 
       {/* ── Brand red gradient at bottom — matches krisumi.com ── */}
-      <div style={{
-        position: 'absolute', bottom: 0, left: 0, right: 0,
-        height: '45%',
-        background: 'linear-gradient(to top, rgba(169,38,45,0.82) 0%, rgba(169,38,45,0.45) 40%, rgba(169,38,45,0.10) 75%, transparent 100%)',
-        pointerEvents: 'none',
-        zIndex: 2,
-      }} />
+      <div className="hero-gradient" />
 
       {/* ── Dot indicators ── */}
-      <div className="absolute left-1/2 -translate-x-1/2 flex gap-2 z-10 bottom-[150px] sm:bottom-20"
-        style={{ }}>
+      <div className="hero-dots">
         {slides.map((_, idx) => (
           <button key={idx} onClick={() => setCurrent(idx)} style={{
             width: current === idx ? '32px' : '8px',
@@ -68,10 +150,7 @@ const Hero = ({ setIsOpen }) => {
       </div>
 
       {/* ── Bottom row: left identity + right CTA ── */}
-      <div
-        className="absolute bottom-0 left-0 right-0 flex flex-col sm:flex-row items-start sm:items-end justify-between px-4 sm:px-10 pb-5 sm:pb-7 gap-4 sm:gap-0"
-        style={{ zIndex: 10 }}
-      >
+      <div className="hero-bottom-row">
 
         {/* Bottom-left: wave + project name */}
         <div style={{ color: '#fff' }}>
