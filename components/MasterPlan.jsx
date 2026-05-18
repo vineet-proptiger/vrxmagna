@@ -7,10 +7,10 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const plans = [
-  { label: 'Site Master Plan',                    img: masterplanImages.masterPlan },
-  { label: '3 LDK + S - 2,733 sq.ft', img: masterplanImages.bhk3 },
-  { label: 'Penthouse - 7,575 sq.ft', img: masterplanImages.bhk2 },
-  
+  { label: 'Site Master Plan',        img: masterplanImages.masterPlan },
+  { label: '1 BHK - 422 TO 535 Sq.Ft', img: masterplanImages.bhk2 },
+  { label: '2 BHK - 567 TO 575 Sq.Ft', img: masterplanImages.bhk3 },
+  { label: 'Studio - 259 TO 309 Sq.Ft', img: masterplanImages.bhk45 },
 ]
 
 const MasterPlan = ({ setIsOpen }) => {

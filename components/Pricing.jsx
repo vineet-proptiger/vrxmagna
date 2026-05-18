@@ -6,45 +6,50 @@ const PRIMARY = "var(--color-primary)";
 
 const units = [
   {
-    type: "3 LDK + S",
-    size: "2,733 sq.ft",
-    price: "₹30 Lacs*",
+    type: "1 BHK",
+    size: "422 TO 535 Sq.Ft",
+    price: "FROM ₹35 LAKHS",
     oldPrice: null,
     btnText: "Get Cost Sheet",
     features: [
-      "Tentative Payment Plan: 25:25:50",
-      "Rentals ₹80 psf & Rising",
-      "If Bankable Gets 1st Priority"
-    ],
-    isPopular: false,
-  },
-  {
-    type: "4 LDK + S",
-    size: "3,630 sq.ft",
-    price: "Ask For Price",
-    oldPrice: null,
-    btnText: "Get Cost Sheet",
-    features: [
-      "Tentative Payment Plan: 25:25:50",
-      "Rentals ₹80 psf & Rising",
-      "If Bankable Gets 1st Priority"
+      "Total Area: 422 TO 535 Sq.Ft",
+      "Bedroom: 70 TO 81 Sq.Ft",
+      "Bathroom: 28 TO 30 Sq.Ft",
+      "Balcony/Pets: Allowed",
+      "Living: 131 TO 152 Sq.Ft",
     ],
     isPopular: true,
   },
   {
-    type: "Penthouse",
-    size: "7,575 sq.ft",
+    type: "2 BHK",
+    size: "567 TO 575 Sq.Ft",
     price: "Ask For Price",
     oldPrice: null,
     btnText: "Get Cost Sheet",
     features: [
-      "Tentative Payment Plan: 25:25:50",
-      "Rentals ₹80 psf & Rising",
-      "If Bankable Gets 1st Priority"
+      "Total Area: 567 TO 575 Sq.Ft",
+      "Bedroom 1: 79 TO 81 Sq.Ft",
+      "Bedroom 2: 72 TO 75 Sq.Ft",
+      "Bathroom: 28 Sq.Ft",
+      "Living: 109 TO 112 Sq.Ft",
     ],
     isPopular: false,
   },
-  
+  {
+    type: "Studio",
+    size: "259 TO 309 Sq.Ft",
+    price: "Ask For Price",
+    oldPrice: null,
+    btnText: "Get Cost Sheet",
+    features: [
+      "Total Area: 259 TO 309 Sq.Ft",
+      "Living Room: 115 TO 131 Sq.Ft",
+      "Bathroom: 25 TO 28 Sq.Ft",
+      "Balcony: N/A",
+      "Kitchen: 38 TO 44 Sq.Ft",
+    ],
+    isPopular: false,
+  },
 ];
 
 const Pricing = ({ setIsOpen }) => {

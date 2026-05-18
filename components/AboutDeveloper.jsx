@@ -199,21 +199,6 @@ const AboutDeveloper = ({ setIsOpen }) => (
             <p style={{ color: '#555', fontFamily: F_SANS, lineHeight: 1.85, fontSize: '14px', margin: '0 0 14px' }}>
               VRX Developers is the visionary force behind VRX MAGNA, Thirumazhisai&apos;s premier smart homes gated community. With a commitment to delivering future-ready homes with world-class amenities, VRX continues to redefine smart living in Chennai through innovative design, home automation, and an unwavering commitment to quality.</p>
 
-            {/* Designers */}
-            <div style={{ background: 'var(--color-gold-bg)', borderRadius: '10px', border: '1px solid var(--color-gold-light)', padding: '12px 16px', marginBottom: '20px' }}>
-              <p style={{ fontFamily: F_JOST, fontSize: '10px', fontWeight: '800', color: 'var(--color-gold)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 8px' }}>Designed By World-Class Maestros</p>
-              {[
-                { role: 'Smart Homes', name: 'VIARA Technology' },
-                { role: 'Architecture', name: 'Premium Designers' },
-                { role: 'Landscape', name: '76% Open Space' },
-              ].map((d, i) => (
-                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5px 0', borderBottom: i < 2 ? '1px dashed var(--color-gold-light)' : 'none' }}>
-                  <span style={{ fontFamily: F_SANS, fontSize: '11px', color: '#9ca3af', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{d.role}</span>
-                  <span style={{ fontFamily: F_JOST, fontSize: '12px', color: 'var(--color-dark)', fontWeight: '700' }}>{d.name}</span>
-                </div>
-              ))}
-            </div>
-
             {/* Stats */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '22px' }}>
               {[
