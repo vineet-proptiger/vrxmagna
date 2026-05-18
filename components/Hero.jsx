@@ -158,9 +158,9 @@ const Hero = ({ setIsOpen }) => {
           <svg width="52" height="22" viewBox="0 0 52 22" fill="none"
             style={{ display: 'block', marginBottom: '8px' }}>
             <path d="M2 16 Q10 4 18 16 Q26 28 34 16 Q42 4 50 16"
-              stroke="white" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+              stroke="white" strokeWidth="1.8" fill="none" strokeLinecap="round" />
             <path d="M6 20 Q14 11 22 20 Q30 29 38 20 Q44 13 50 20"
-              stroke="rgba(255,255,255,0.4)" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+              stroke="rgba(255,255,255,0.4)" strokeWidth="1.2" fill="none" strokeLinecap="round" />
           </svg>
           <p style={{
             fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: '400',
@@ -215,8 +215,8 @@ const Hero = ({ setIsOpen }) => {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" strokeWidth="2.5"
               strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
             </svg>
           </div>
         </div>
