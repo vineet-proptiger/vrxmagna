@@ -403,11 +403,13 @@
     font-weight: 700;
     box-shadow: none !important;
     filter: drop-shadow(-4px 0 14px rgba(169, 38, 45, 0.28));
+    border: 2px solid var(--color-brand) !important;
+    transition: all 0.3s ease !important;
   }
 
   .btn-floating-tab:hover {
-    transform: translateY(calc(-50% - 4px)) !important;
-    background: var(--color-brand-hover) !important;
+    background: #ffffff !important;
+    color: var(--color-brand) !important;
     filter: drop-shadow(-6px 0 20px rgba(169, 38, 45, 0.35));
   }
 

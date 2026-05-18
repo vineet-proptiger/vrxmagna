@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import {
-  Umbrella, Waves, Trees, Presentation, Map, Activity, Gamepad2, Droplets, Droplet, SunDim
+  Car, Waves, ShieldCheck, Stethoscope, BookOpen, Building2, Home, Gamepad2
 } from 'lucide-react'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
@@ -29,17 +29,22 @@ const CurvedCorners = ({ bg = '#fff', color = '#e5e7eb' }) => {
 }
 
 const newAmenities = [
-  { icon: Umbrella, title: 'POOL BAR', desc: 'Unwind at our elegant pool bar with refreshing drinks and serene vibes.' },
-  { icon: Trees, title: 'OUTDOOR GAZEBO', desc: 'Relax at the outdoor gazebo with serene surroundings and peaceful vibes.' },
-  { icon: Waves, title: 'WATERSCAPE', desc: 'Enjoy the calming waterscape with serene views and relaxing ambiance.' },
-  { icon: Presentation, title: 'MULTIPURPOSE HALL', desc: 'Host gatherings in the multipurpose hall with modern amenities and flexible space.' },
-  { icon: Map, title: 'AMPHITHEATRE', desc: 'Host gatherings and events in a versatile, well-designed space.' },
-  { icon: Droplets, title: 'KID\'S STREAM', desc: 'Enjoy playful moments at the kid\'s stream with fun water activities.' },
-  { icon: Activity, title: 'KID\'S WATER PARK', desc: 'Have fun at the kid\'s water park with safe and playful water features.' },
-  { icon: Gamepad2, title: 'KID\'S PLAY AREA', desc: 'A safe and vibrant space for kids to play, explore, and enjoy.' },
-  { icon: Droplet, title: 'MIST POND', desc: 'Relax by the mist pond with a calm and refreshing ambiance.' },
-  { icon: SunDim, title: 'RESTING PLACE', desc: 'Unwind at the resting place with peaceful surroundings and comfort.' },
-  { icon: Waves, title: 'SOURCE FOUNTAIN', desc: 'Enjoy the source fountain with soothing water flow and serene vibes.' },
+  { icon: Car,          title: 'PARKING SPACE',    desc: 'Dedicated and secured parking space for every resident with easy access and convenience.' },
+  { icon: Waves,        title: 'SWIMMING POOL',    desc: 'Enjoy a refreshing dip in the well-maintained swimming pool with serene surroundings.' },
+  { icon: ShieldCheck,  title: 'PRIVATE SECURITY', desc: 'Round-the-clock private security ensuring complete safety and peace of mind for all residents.' },
+  { icon: Stethoscope,  title: 'MEDICAL CENTRE',   desc: 'On-site medical centre providing prompt healthcare facilities and support for residents.' },
+  { icon: BookOpen,     title: 'LIBRARY AREA',     desc: 'A peaceful library area stocked with books and resources for knowledge and relaxation.' },
+  { icon: Building2,    title: 'CLUB HOUSE',       desc: 'A premium clubhouse with modern facilities for socialising, events, and recreation.' },
+  { icon: Home,         title: 'HOME AUTOMATION',  desc: 'Future-ready smart home automation for a seamless and intelligent living experience.' },
+  { icon: Gamepad2,     title: "KID'S PLAY AREA",  desc: 'A safe and vibrant play area for kids to explore, play, and enjoy endless fun.' },
+  // { icon: Umbrella,  title: 'POOL BAR',          desc: 'Unwind at our elegant pool bar with refreshing drinks and serene vibes.' },
+  // { icon: Trees,     title: 'OUTDOOR GAZEBO',    desc: 'Relax at the outdoor gazebo with serene surroundings and peaceful vibes.' },
+  // { icon: Map,       title: 'AMPHITHEATRE',       desc: 'Host gatherings and events in a versatile, well-designed space.' },
+  // { icon: Droplets,  title: "KID'S STREAM",       desc: "Enjoy playful moments at the kid's stream with fun water activities." },
+  // { icon: Activity,  title: "KID'S WATER PARK",   desc: "Have fun at the kid's water park with safe and playful water features." },
+  // { icon: Droplet,   title: 'MIST POND',          desc: 'Relax by the mist pond with a calm and refreshing ambiance.' },
+  // { icon: SunDim,    title: 'RESTING PLACE',      desc: 'Unwind at the resting place with peaceful surroundings and comfort.' },
+  // { icon: Waves2,    title: 'SOURCE FOUNTAIN',    desc: 'Enjoy the source fountain with soothing water flow and serene vibes.' },
 ]
 
 const Amenities = () => {
@@ -99,8 +104,6 @@ const Amenities = () => {
               </div>
             ))}
 
-            {/* Empty 12th cell to complete the grid nicely on desktop */}
-            <div className="hidden lg:block bg-white" />
           </div>
         </div>
 
