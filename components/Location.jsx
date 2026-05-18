@@ -102,7 +102,7 @@ const Location = () => {
               background: '#EAE5DC'
             }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.4!2d80.0876!3d13.0635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260e5e0f47a6b%3A0x0!2sThirumazhisai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.118014592555!2d80.01639757507837!3d13.08349788724228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5289828a183d45%3A0xb6e587b3ba3f3371!2sVRX%20Magna!5e1!3m2!1sen!2sin!4v1779079804207!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '420px', display: 'block' }}
