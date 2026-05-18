@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { galleryImages } from '../lib/images'
 
@@ -14,16 +14,29 @@ const ArcIcon = () => (
 
 const CarouselSection = ({ setIsOpen }) => {
   const [index, setIndex] = useState(0)
+  const [prevIndex, setPrevIndex] = useState(null)
 
   const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % galleryImages.length)
+    setIndex((prev) => {
+      setPrevIndex(prev)
+      return (prev + 1) % galleryImages.length
+    })
   }
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
+    setIndex((prev) => {
+      setPrevIndex(prev)
+      return (prev - 1 + galleryImages.length) % galleryImages.length
+    })
   }
 
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 3000)
+    return () => clearInterval(timer)
+  }, [])
+
   const currentImage = galleryImages[index]
+  const previousImage = prevIndex !== null ? galleryImages[prevIndex] : null
 
   return (
     <section id="homes-designed" style={{
@@ -41,7 +54,7 @@ const CarouselSection = ({ setIsOpen }) => {
             <h2 style={{
               fontFamily: F_JOST, fontWeight: '700', fontSize: '18px',
               color: '#684C1B', letterSpacing: '0.22em', textTransform: 'uppercase', margin: 0,
-            }} className="text-center">HOMES DESIGNED AROUND YOU</h2>
+            }} className="text-center">PROJECT GALLERY</h2>
           </div>
 
           {/* Right side Buttons */}
@@ -86,25 +99,35 @@ const CarouselSection = ({ setIsOpen }) => {
         </div>
 
         {/* ── Main Single Image ── */}
+        <style>{`
+          @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to   { transform: translateX(0); }
+          }
+          @keyframes slideOutToLeft {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-100%); }
+          }
+          .slide-in  { animation: slideInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+          .slide-out { animation: slideOutToLeft  0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+        `}</style>
         <div className="relative w-full aspect-[16/8] min-h-[400px] bg-gray-100 overflow-hidden">
-          <Image 
-            src={currentImage.src} 
-            alt={currentImage.alt || 'Gallery Image'} 
-            fill 
-            className="object-cover transition-opacity duration-500 ease-in-out" 
-            key={index} // Force re-render for simple fade effect
-          />
+          {/* Previous image slides out to the left */}
+          {previousImage && (
+            <div key={`prev-${prevIndex}`} className="slide-out absolute inset-0">
+              <Image src={previousImage.src} alt="" fill className="object-cover" />
+            </div>
+          )}
+          {/* New image slides in from the right */}
+          <div key={`curr-${index}`} className="slide-in absolute inset-0">
+            <Image
+              src={currentImage.src}
+              alt={currentImage.alt || 'Gallery Image'}
+              fill
+              className="object-cover"
+            />
+          </div>
           
-          {/* Enquire Now Overlay */}
-          <button className="btn-brand absolute" onClick={() => setIsOpen(true)} style={{
-            bottom: '24px', right: '24px', padding: '12px 24px', fontSize: '12px', zIndex: 10
-          }}>
-            ENQUIRE NOW
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </button>
         </div>
 
       </div>
