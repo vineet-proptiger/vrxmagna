@@ -8,7 +8,7 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const ArcIcon = () => (
   <svg width="28" height="14" viewBox="0 0 28 14" fill="none"
     style={{ display: 'inline-block', marginRight: '10px', verticalAlign: 'middle', marginBottom: '3px' }}>
-    <path d="M2 12 Q14 2 26 12" stroke="#684C1B" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+    <path d="M2 12 Q14 2 26 12" stroke="#684C1B" strokeWidth="1.5" fill="none" strokeLinecap="round" />
   </svg>
 )
 
@@ -47,7 +47,7 @@ const CarouselSection = ({ setIsOpen }) => {
 
         {/* ── Header Row ── */}
         <div className="relative flex flex-col md:flex-row items-center justify-center mb-8 gap-6 w-full min-h-[50px]">
-          
+
           {/* Centered Heading */}
           <div className="flex items-center justify-center">
             <ArcIcon />
@@ -62,17 +62,17 @@ const CarouselSection = ({ setIsOpen }) => {
             <button className="btn-brand hidden sm:flex" onClick={() => setIsOpen(true)} style={{ padding: '12px 24px', fontSize: '12px' }}>
               ENQUIRE NOW
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
               </svg>
             </button>
-            
+
             {/* Arrows */}
             <div className="flex" style={{
-               WebkitMask: 'radial-gradient(circle at 0 0, transparent 4px, black 4.5px) top left, radial-gradient(circle at 100% 0, transparent 4px, black 4.5px) top right, radial-gradient(circle at 0 100%, transparent 4px, black 4.5px) bottom left, radial-gradient(circle at 100% 100%, transparent 4px, black 4.5px) bottom right',
-               WebkitMaskSize: '51% 51%',
-               WebkitMaskRepeat: 'no-repeat',
-               border: '1px solid #D5C2A8'
+              WebkitMask: 'radial-gradient(circle at 0 0, transparent 4px, black 4.5px) top left, radial-gradient(circle at 100% 0, transparent 4px, black 4.5px) top right, radial-gradient(circle at 0 100%, transparent 4px, black 4.5px) bottom left, radial-gradient(circle at 100% 100%, transparent 4px, black 4.5px) bottom right',
+              WebkitMaskSize: '51% 51%',
+              WebkitMaskRepeat: 'no-repeat',
+              border: '1px solid #D5C2A8'
             }}>
               <button onClick={prevSlide} style={{
                 width: '46px', height: '44px', background: '#fff', color: '#684C1B',
@@ -80,8 +80,8 @@ const CarouselSection = ({ setIsOpen }) => {
                 borderRight: '1px solid #D5C2A8', cursor: 'pointer', transition: 'background 0.2s'
               }} onMouseEnter={e => e.currentTarget.style.background = '#fef9f0'} onMouseLeave={e => e.currentTarget.style.background = '#fff'}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="19" y1="12" x2="5" y2="12"/>
-                  <polyline points="12 19 5 12 12 5"/>
+                  <line x1="19" y1="12" x2="5" y2="12" />
+                  <polyline points="12 19 5 12 12 5" />
                 </svg>
               </button>
               <button onClick={nextSlide} style={{
@@ -90,8 +90,8 @@ const CarouselSection = ({ setIsOpen }) => {
                 cursor: 'pointer', transition: 'background 0.2s'
               }} onMouseEnter={e => e.currentTarget.style.background = '#fef9f0'} onMouseLeave={e => e.currentTarget.style.background = '#fff'}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
                 </svg>
               </button>
             </div>
@@ -127,7 +127,7 @@ const CarouselSection = ({ setIsOpen }) => {
               className="object-cover"
             />
           </div>
-          
+
         </div>
 
       </div>
