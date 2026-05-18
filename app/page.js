@@ -15,12 +15,12 @@ const MasterPlan = dynamic(() => import('../components/MasterPlan'), { ssr: true
 const AboutDeveloper = dynamic(() => import('../components/AboutDeveloper'), { ssr: true })
 const Footer = dynamic(() => import('../components/Footer'), { ssr: true })
 
-const Gallery = dynamic(() => import('../components/Gallery'), { ssr: false })
+// const Gallery = dynamic(() => import('../components/Gallery'), { ssr: false })
 const VirtualTour = dynamic(() => import('../components/VirtualTour'), { ssr: false })
 const CarouselSection = dynamic(() => import('../components/CarouselSection'), { ssr: false })
-const ExclusiveAmenities = dynamic(() => import('../components/ExclusiveAmenities'), { ssr: false })
-const Sustainability = dynamic(() => import('../components/Sustainability'), { ssr: false })
-const JapaneseExcellence = dynamic(() => import('../components/JapaneseExcellence'), { ssr: false })
+// const ExclusiveAmenities = dynamic(() => import('../components/ExclusiveAmenities'), { ssr: false })
+// const Sustainability = dynamic(() => import('../components/Sustainability'), { ssr: false })
+// const JapaneseExcellence = dynamic(() => import('../components/JapaneseExcellence'), { ssr: false })
 const EnquireModal = dynamic(() => import('../components/EnquireModal'), { ssr: false })
 const AosInit = dynamic(() => import('../components/AosInit'), { ssr: false })
 
@@ -34,15 +34,15 @@ export default function Home() {
       <Hero setIsOpen={setIsOpen} />
       <Overview />
       <Highlights setIsOpen={setIsOpen} />
-      <Gallery setIsOpen={setIsOpen} />
+      {/* <Gallery setIsOpen={setIsOpen} /> */}
       <VirtualTour setIsOpen={setIsOpen} />
       <CarouselSection setIsOpen={setIsOpen} />
       <Amenities setIsOpen={setIsOpen} />
-      <ExclusiveAmenities />
+      {/* <ExclusiveAmenities /> */}
       <Pricing setIsOpen={setIsOpen} />
       <Location />
-      <Sustainability />
-      <JapaneseExcellence />
+      {/* <Sustainability /> */}
+      {/* <JapaneseExcellence /> */}
       <MasterPlan setIsOpen={setIsOpen} />
       {/* <PaymentPlan setIsOpen={setIsOpen} /> */}
       <AboutDeveloper setIsOpen={setIsOpen} />

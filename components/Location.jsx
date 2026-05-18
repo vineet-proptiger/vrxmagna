@@ -6,16 +6,15 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const locationItems = [
   { name: 'Thirumazhisai Metro Station', time: '2 mins' },
   { name: 'Kuthambakkam AC Bus Terminus', time: '5 mins' },
+  { name: 'Chennai Outer Ring Road (ORR)', time: '5 mins' },
+  { name: 'Queensland Theme Park', time: '5 mins' },
+  { name: 'Poonamallee', time: '10 mins' },
   { name: 'Porur Junction', time: '10 mins' },
-  { name: 'Poonamallee', time: '10-12 mins' },
-  { name: 'Koyambedu', time: '20-25 mins' },
-  { name: 'Anna Nagar', time: '25-30 mins' },
-  { name: 'Vadapalani', time: '30-35 mins' },
-  { name: 'T Nagar', time: '35-40 mins' },
-  { name: 'Chennai International Airport', time: '40-45 mins' },
-  { name: 'Parandur International Airport', time: '30-35 mins' },
-  { name: 'SRMC Hospital', time: '10-12 mins' },
   { name: 'Saveetha Medical College', time: '10 mins' },
+  { name: 'SRMC Hospital', time: '10 mins' },
+  { name: 'Koyambedu (CMBT)', time: '20 mins' },
+  { name: 'Parandur International Airport (Proposed)', time: '30 mins' },
+  { name: 'Chennai International Airport', time: '40 mins' },
 ]
 
 const Location = () => {

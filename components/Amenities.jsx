@@ -97,7 +97,8 @@ const Amenities = () => {
                 {/* Description */}
                 <p style={{
                   fontFamily: F_SANS, fontSize: '13px', color: '#6b7280',
-                  lineHeight: 1.6, margin: 0
+                  lineHeight: 1.6, margin: 0,
+                  textAlign: 'justify'
                 }}>
                   {item.desc}
                 </p>

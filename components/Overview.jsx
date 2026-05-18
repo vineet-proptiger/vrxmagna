@@ -82,6 +82,7 @@ const Overview = () => (
         fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
         lineHeight: 1.9, margin: '0 0 28px',
         maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
+        textAlign: 'justify',
       }} data-aos="fade-up" data-aos-delay="80">
         VRX MAGNA, Thirumazhisai&rsquo;s premier smart homes gated community. With 437 units of
         unparalleled lifestyle, delve into a world of 100 amenities designed to elevate every moment.
