@@ -32,7 +32,7 @@ export default function Home() {
       <AosInit />
       <Navbar setIsOpen={setIsOpen} />
       <Hero setIsOpen={setIsOpen} />
-      <Overview />
+      <Overview setIsOpen={setIsOpen} />
       <Highlights setIsOpen={setIsOpen} />
       {/* <Gallery setIsOpen={setIsOpen} /> */}
       <CarouselSection setIsOpen={setIsOpen} />

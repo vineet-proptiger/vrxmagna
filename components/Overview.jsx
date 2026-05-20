@@ -54,7 +54,7 @@ const infoItems = [
   { label: 'PRICE',      value: 'FROM ₹35 LAKHS'          },
 ]
 
-const Overview = () => (
+const Overview = ({ setIsOpen }) => (
   <section
     id="overview"
     style={{ background: '#fff', padding: '72px 0 80px', borderBottom: '1px solid #f0ede6' }}
@@ -77,17 +77,30 @@ const Overview = () => (
         </h2>
       </div>
 
-      {/* ── Paragraph ── */}
+      {/* ── Paragraphs ── */}
+      <p style={{
+        fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
+        lineHeight: 1.9, margin: '0 0 18px',
+        maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
+        textAlign: 'justify',
+      }} data-aos="fade-up" data-aos-delay="80">
+        Vijay Raja Homes introduces VRX Magna, a thoughtfully envisioned residential enclave located in the rapidly developing neighbourhood of Thirumazhisai, Chennai. Designed as a contemporary lifestyle address, the project integrates smart living solutions, efficient space planning, and expansive green environments to create a well-balanced urban community.
+      </p>
+      <p style={{
+        fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
+        lineHeight: 1.9, margin: '0 0 18px',
+        maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
+        textAlign: 'justify',
+      }} data-aos="fade-up" data-aos-delay="100">
+        Set across 6.5 acres with nearly 76% open space, VRX Magna offers intelligently designed Studio, 1 BHK, and 2 BHK homes that prioritise comfort, ventilation, and functionality. The architecture blends modern aesthetics with practical layouts, ensuring homes that feel open, bright, and future-ready.
+      </p>
       <p style={{
         fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
         lineHeight: 1.9, margin: '0 0 28px',
         maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
         textAlign: 'justify',
-      }} data-aos="fade-up" data-aos-delay="80">
-        VRX MAGNA, Thirumazhisai&rsquo;s premier smart homes gated community. With 437 units of
-        unparalleled lifestyle, delve into a world of 100 amenities designed to elevate every moment.
-        Enjoy smart technology, home automation, and the convenience of a prime location near
-        Thirumazhisai Metro Station and Parandur International Airport.
+      }} data-aos="fade-up" data-aos-delay="120">
+        With over 100 curated amenities, landscaped greens, and community-focused spaces, the development delivers a vibrant yet secure living experience. Positioned along a high-growth infrastructure corridor, VRX Magna presents a compelling opportunity for both first-time homeowners and investors seeking long-term appreciation in Chennai&rsquo;s expanding western belt.
       </p>
 
       {/* ── RERA ── */}
@@ -141,6 +154,31 @@ const Overview = () => (
           </div>
         ))}
         </div>
+      </div>
+
+      {/* ── Request A Brochure CTA ── */}
+      <div style={{ marginTop: '40px' }} data-aos="fade-up" data-aos-delay="260">
+        <button
+          onClick={() => setIsOpen && setIsOpen(true)}
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: '10px',
+            background: '#A9262D', color: '#fff',
+            fontFamily: F_JOST, fontSize: '12px', fontWeight: '700',
+            letterSpacing: '0.16em', textTransform: 'uppercase',
+            padding: '14px 32px', border: 'none', cursor: 'pointer',
+            transition: 'background 0.3s ease',
+          }}
+          onMouseEnter={e => e.currentTarget.style.background = '#8a1e24'}
+          onMouseLeave={e => e.currentTarget.style.background = '#A9262D'}
+        >
+          Request A Brochure
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2.5"
+            strokeLinecap="round" strokeLinejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </button>
       </div>
 
     </div>

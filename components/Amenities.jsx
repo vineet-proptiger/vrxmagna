@@ -1,7 +1,9 @@
 'use client'
 import React from 'react'
 import {
-  Car, Waves, ShieldCheck, Stethoscope, BookOpen, Building2, Home, Gamepad2
+  Flower2, PersonStanding, Gamepad2, Trophy,
+  Building2, Waves, Dice5, Wifi,
+  ShieldCheck, Home, Stethoscope, Coffee
 } from 'lucide-react'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
@@ -29,22 +31,18 @@ const CurvedCorners = ({ bg = '#fff', color = '#e5e7eb' }) => {
 }
 
 const newAmenities = [
-  { icon: Car,          title: 'PARKING SPACE',    desc: 'Dedicated and secured parking space for every resident with easy access and convenience.' },
-  { icon: Waves,        title: 'SWIMMING POOL',    desc: 'Enjoy a refreshing dip in the well-maintained swimming pool with serene surroundings.' },
-  { icon: ShieldCheck,  title: 'PRIVATE SECURITY', desc: 'Round-the-clock private security ensuring complete safety and peace of mind for all residents.' },
-  { icon: Stethoscope,  title: 'MEDICAL CENTRE',   desc: 'On-site medical centre providing prompt healthcare facilities and support for residents.' },
-  { icon: BookOpen,     title: 'LIBRARY AREA',     desc: 'A peaceful library area stocked with books and resources for knowledge and relaxation.' },
-  { icon: Building2,    title: 'CLUB HOUSE',       desc: 'A premium clubhouse with modern facilities for socialising, events, and recreation.' },
-  { icon: Home,         title: 'HOME AUTOMATION',  desc: 'Future-ready smart home automation for a seamless and intelligent living experience.' },
-  { icon: Gamepad2,     title: "KID'S PLAY AREA",  desc: 'A safe and vibrant play area for kids to explore, play, and enjoy endless fun.' },
-  // { icon: Umbrella,  title: 'POOL BAR',          desc: 'Unwind at our elegant pool bar with refreshing drinks and serene vibes.' },
-  // { icon: Trees,     title: 'OUTDOOR GAZEBO',    desc: 'Relax at the outdoor gazebo with serene surroundings and peaceful vibes.' },
-  // { icon: Map,       title: 'AMPHITHEATRE',       desc: 'Host gatherings and events in a versatile, well-designed space.' },
-  // { icon: Droplets,  title: "KID'S STREAM",       desc: "Enjoy playful moments at the kid's stream with fun water activities." },
-  // { icon: Activity,  title: "KID'S WATER PARK",   desc: "Have fun at the kid's water park with safe and playful water features." },
-  // { icon: Droplet,   title: 'MIST POND',          desc: 'Relax by the mist pond with a calm and refreshing ambiance.' },
-  // { icon: SunDim,    title: 'RESTING PLACE',      desc: 'Unwind at the resting place with peaceful surroundings and comfort.' },
-  // { icon: Waves2,    title: 'SOURCE FOUNTAIN',    desc: 'Enjoy the source fountain with soothing water flow and serene vibes.' },
+  { icon: Flower2,        title: 'LANDSCAPED GARDENS',     desc: 'Beautifully landscaped gardens and green zones for fresh air, relaxation, and wellness every day.' },
+  { icon: PersonStanding, title: 'JOGGING & WALKING TRACK', desc: 'Dedicated jogging and walking tracks through green spaces for a healthy and active lifestyle.' },
+  { icon: Gamepad2,       title: "CHILDREN'S PLAY COURTS", desc: "Safe and vibrant children's play courts designed for fun, exploration, and active engagement." },
+  { icon: Trophy,         title: 'SPORTS FACILITIES',      desc: 'Premium sports facilities including basketball courts and a skating rink for recreation and fitness.' },
+  { icon: Building2,      title: 'GRAND CLUBHOUSE',        desc: 'A grand clubhouse and multipurpose hall for community events, celebrations, and social gatherings.' },
+  { icon: Waves,          title: 'SWIMMING POOL & GYM',    desc: 'A well-maintained swimming pool and fully equipped gym to support your fitness goals.' },
+  { icon: Dice5,          title: 'INDOOR GAMES & RECREATION', desc: 'Vibrant indoor games and recreation rooms for leisure, fun, and community bonding.' },
+  { icon: Wifi,           title: 'CO-WORKING LOUNGES',     desc: 'Modern co-working lounges and Wi-Fi-enabled spaces for productive remote work from home.' },
+  { icon: ShieldCheck,    title: '24×7 GATED SECURITY',    desc: '24×7 gated security and surveillance ensuring complete safety and peace of mind for all residents.' },
+  { icon: Home,           title: 'HOME AUTOMATION',        desc: 'Smart home automation features for enhanced comfort, convenience, and a future-ready living experience.' },
+  { icon: Stethoscope,    title: 'CLINIC & CAFÉ ZONES',    desc: 'On-site clinic space, café zones, and daily convenience areas for health and everyday needs.' },
+  { icon: Coffee,         title: 'COMMUNITY SPACES',       desc: 'Dedicated community and relaxation pockets for unwinding, socialising, and building connections.' },
 ]
 
 const Amenities = () => {
@@ -63,7 +61,7 @@ const Amenities = () => {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
           }}>
             <ArcIcon />
-            PROJECT AMENITIES
+            LIFESTYLE AMENITIES – Experience More Every Day
           </h2>
         </div>
 

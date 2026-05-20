@@ -59,11 +59,14 @@ const CurvedCorners = ({ bg = BG }) => {
 }
 
 /* SVG icons */
-const IconPin = () => (
+const IconGate = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-    <circle cx="12" cy="10" r="3" />
+    <path d="M3 21h18" />
+    <path d="M5 21V7l7-4 7 4v14" />
+    <path d="M9 21v-4h6v4" />
+    <rect x="2" y="9" width="3" height="8" rx="1" />
+    <rect x="19" y="9" width="3" height="8" rx="1" />
   </svg>
 )
 const IconTrees = () => (
@@ -72,36 +75,60 @@ const IconTrees = () => (
     <path d="M12 22V12" />
     <path d="M7 12l5-5 5 5" />
     <path d="M5 17l7-7 7 7" />
-    <circle cx="8" cy="7" r="2.5" />
-    <circle cx="16" cy="7" r="2.5" />
   </svg>
 )
-const IconBuilding = () => (
+const IconHome = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M3 21h18" />
-    <path d="M5 21V7l7-4 7 4v14" />
-    <path d="M9 21v-4h6v4" />
-    <line x1="9" y1="9" x2="9" y2="9.01" />
-    <line x1="15" y1="9" x2="15" y2="9.01" />
-    <line x1="9" y1="13" x2="9" y2="13.01" />
-    <line x1="15" y1="13" x2="15" y2="13.01" />
+    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+    <polyline points="9 22 9 12 15 12 15 22" />
   </svg>
 )
-const IconMap = () => (
+const IconSmart = () => (
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+    stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="14" rx="2" />
+    <path d="M8 21h8M12 17v4" />
+    <path d="M9 9l2 2 4-4" />
+  </svg>
+)
+const IconStar = () => (
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+    stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+)
+const IconRoad = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
     <circle cx="12" cy="10" r="3" />
-    <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
+  </svg>
+)
+const IconRupee = () => (
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+    stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 3h12M6 8h12M6 13l8 8M6 8a5 5 0 005 5" />
+  </svg>
+)
+const IconKey = () => (
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+    stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="7" cy="17" r="4" />
+    <path d="M10.5 13.5L21 3" />
+    <path d="M19 5l2 2M16 8l2 2" />
   </svg>
 )
 
 const highlights = [
-  { title: '10X GROWTH', desc: 'Prime Thirumazhisai location with exceptional investment potential and 10X growth opportunity.', Icon: IconPin },
-  { title: '76% OPEN SPACE', desc: '76% open and green spaces crafted for fresh air, wellness, and a balanced lifestyle.', Icon: IconTrees },
-  { title: 'HOME AUTOMATION', desc: 'Future-ready smart home automation for a seamless and intelligent living experience.', Icon: IconBuilding },
-  { title: 'VIARA EXPERIENCE', desc: 'Exclusive VIARA lifestyle experience with world-class amenities and premium facilities.', Icon: IconMap },
+  { title: 'PREMIUM GATED COMMUNITY', desc: 'Premium gated community in Thirumazhisai by Vijay Raja Homes, crafted with quality and trust.', Icon: IconGate },
+  { title: '76% OPEN SPACES', desc: 'Sprawled across 6.5 acres with an impressive 76% open and green spaces for wellness and fresh air.', Icon: IconTrees },
+  { title: 'SMART HOME DESIGNS', desc: 'Intelligently designed Studio, 1 & 2 BHK homes with efficient layouts for modern urban living.', Icon: IconHome },
+  { title: 'HOME AUTOMATION', desc: 'Integrated smart home features for enhanced comfort, convenience, and a future-ready lifestyle.', Icon: IconSmart },
+  { title: '100+ AMENITIES', desc: 'Over 100 lifestyle amenities promoting wellness, recreation, and vibrant community engagement.', Icon: IconStar },
+  { title: 'STRATEGIC LOCATION', desc: 'Located on Poonamallee High Road in a fast-growing residential and infrastructure corridor.', Icon: IconRoad },
+  { title: '₹15,000 RENTAL INCOME', desc: 'Attractive pre-signed rental income opportunity of ₹15,000/- for strong investment returns.', Icon: IconRupee },
+  { title: 'HANDING OVER SOON', desc: 'Handing over soon with excellent investment potential and long-term appreciation in Chennai\'s western belt.', Icon: IconKey },
 ]
 
 const Highlights = ({ setIsOpen }) => (
@@ -117,7 +144,7 @@ const Highlights = ({ setIsOpen }) => (
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
           <ArcIcon />
-          KEY HIGHLIGHTS
+          PROJECT HIGHLIGHTS &amp; USPs
         </h2>
       </div>
 

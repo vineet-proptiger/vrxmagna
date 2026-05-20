@@ -6,9 +6,24 @@ const PRIMARY = "var(--color-primary)";
 
 const units = [
   {
-    type: "1 BHK",
+    type: "Studio Apartments",
+    size: "259 TO 309 Sq.Ft",
+    price: "Price On Request",
+    oldPrice: null,
+    btnText: "Get Cost Sheet",
+    features: [
+      "Total Area: 259 TO 309 Sq.Ft",
+      "Living Room: 115 TO 131 Sq.Ft",
+      "Bathroom: 25 TO 28 Sq.Ft",
+      "Balcony: N/A",
+      "Kitchen: 38 TO 44 Sq.Ft",
+    ],
+    isPopular: false,
+  },
+  {
+    type: "1 BHK Residences",
     size: "422 TO 535 Sq.Ft",
-    price: "FROM ₹35 LAKHS",
+    price: "Price On Request",
     oldPrice: null,
     btnText: "Get Cost Sheet",
     features: [
@@ -21,9 +36,9 @@ const units = [
     isPopular: true,
   },
   {
-    type: "2 BHK",
+    type: "2 BHK Residences",
     size: "567 TO 575 Sq.Ft",
-    price: "Ask For Price",
+    price: "Price On Request",
     oldPrice: null,
     btnText: "Get Cost Sheet",
     features: [
@@ -32,21 +47,6 @@ const units = [
       "Bedroom 2: 72 TO 75 Sq.Ft",
       "Bathroom: 28 Sq.Ft",
       "Living: 109 TO 112 Sq.Ft",
-    ],
-    isPopular: false,
-  },
-  {
-    type: "Studio",
-    size: "259 TO 309 Sq.Ft",
-    price: "Ask For Price",
-    oldPrice: null,
-    btnText: "Get Cost Sheet",
-    features: [
-      "Total Area: 259 TO 309 Sq.Ft",
-      "Living Room: 115 TO 131 Sq.Ft",
-      "Bathroom: 25 TO 28 Sq.Ft",
-      "Balcony: N/A",
-      "Kitchen: 38 TO 44 Sq.Ft",
     ],
     isPopular: false,
   },
@@ -83,8 +83,11 @@ const Pricing = ({ setIsOpen }) => {
             className="font-bold mb-4"
             style={{ fontFamily: "var(--font-jost), Montserrat, sans-serif", color: PRIMARY, fontSize: "26px", letterSpacing: "-0.01em" }}
           >
-            Configuration &amp; <span style={{ color: GOLD }}>Price</span>
+            Configurations &amp; <span style={{ color: GOLD }}>Pricing</span>
           </h2>
+          <p style={{ fontFamily: F_SANS, fontSize: "13px", color: "#6b7280", marginBottom: "4px" }}>
+            VRX Magna offers thoughtfully crafted homes designed for modern urban living
+          </p>
 
           <div className="w-20 h-1 mx-auto rounded-full mb-4" style={{ background: GOLD }} />
           {/* <p style={{ fontFamily: F_SANS, fontSize: "13px", color: "#6b7280", marginBottom: "4px" }}>

@@ -1,23 +1,51 @@
 'use client'
+import { useState } from 'react'
 
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
-const locationItems = [
-  { name: 'Thirumazhisai Metro Station', time: '2 mins' },
-  { name: 'Kuthambakkam AC Bus Terminus', time: '5 mins' },
-  { name: 'Chennai Outer Ring Road (ORR)', time: '5 mins' },
-  { name: 'Queensland Theme Park', time: '5 mins' },
-  { name: 'Poonamallee', time: '10 mins' },
-  { name: 'Porur Junction', time: '10 mins' },
-  { name: 'Saveetha Medical College', time: '10 mins' },
-  { name: 'SRMC Hospital', time: '10 mins' },
-  { name: 'Koyambedu (CMBT)', time: '20 mins' },
-  { name: 'Parandur International Airport (Proposed)', time: '30 mins' },
-  { name: 'Chennai International Airport', time: '40 mins' },
+const locationCategories = [
+  {
+    category: 'Connectivity',
+    items: [
+      { name: 'Poonamallee Bus Stand', dist: '3 km' },
+      { name: 'Chennai Metro – Poonamallee Metro Station (Upcoming)', dist: '3.5 km' },
+      { name: 'Koyambedu Metro Station & Bus Terminus', dist: '14 km' },
+      { name: 'Thirumazhisai Bus Stand', dist: '0.14 km' },
+    ],
+  },
+  {
+    category: 'Education',
+    items: [
+      { name: 'Chennai Public School', dist: '2 km' },
+      { name: 'Velammal Vidyalaya', dist: '4 km' },
+      { name: 'Saveetha Engineering College', dist: '3 km' },
+      { name: 'Panimalar Engineering College', dist: '5 km' },
+    ],
+  },
+  {
+    category: 'Healthcare',
+    items: [
+      { name: 'Sree Sai Dental Care', dist: '0.42 km' },
+      { name: 'Sri Dhanvantri Physiotherapy Clinic', dist: '0.46 km' },
+      { name: 'Aachi Hospital', dist: '0.94 km' },
+      { name: 'Public Healthcare Hospital', dist: '1.5 km' },
+    ],
+  },
+  {
+    category: 'Business & Commercial Hubs',
+    items: [
+      { name: 'DLF IT Park', dist: '12 km' },
+      { name: 'RMZ One Paramount', dist: '13 km' },
+      { name: 'Commercial Zone', dist: '14 km' },
+      { name: 'Ambattur Industrial Estate', dist: '16 km' },
+    ],
+  },
 ]
 
 const Location = () => {
+  const [openIdx, setOpenIdx] = useState(0)
+
   return (
     <section id="location" style={{
       padding: '72px 0',
@@ -41,52 +69,74 @@ const Location = () => {
 
         <div className="flex flex-col lg:flex-row gap-8 items-stretch">
 
-          {/* LEFT — Data Table */}
+          {/* LEFT — Accordion */}
           <div className="w-full lg:w-[45%]" data-aos="fade-right">
-            <div style={{
-              border: '1px solid #D5C2A8',
-              background: '#EAE5DC',
-            }}>
-              
+            <div style={{ border: '1px solid #D5C2A8', background: '#EAE5DC' }}>
+
               {/* Table Header */}
               <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1.2fr 1fr',
-                background: '#9b2c2c', // Matches the brand dark red shown
-                color: '#fff',
-                fontFamily: F_JOST,
-                fontWeight: '600',
-                fontSize: '13.5px',
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase',
+                display: 'grid', gridTemplateColumns: '1.2fr 1fr',
+                background: '#9b2c2c', color: '#fff',
+                fontFamily: F_JOST, fontWeight: '600', fontSize: '13.5px',
+                letterSpacing: '0.04em', textTransform: 'uppercase',
                 borderBottom: '1px solid #D5C2A8',
               }}>
                 <div style={{ padding: '10px 16px', borderRight: '1px solid #D5C2A8' }}>LOCATION</div>
-                <div style={{ padding: '10px 16px', textAlign: 'center' }}>APPROX. DRIVE TIME*</div>
+                <div style={{ padding: '10px 16px', textAlign: 'center' }}>DISTANCE</div>
               </div>
 
-              {/* Table Rows */}
-              <div>
-                {locationItems.map((item, i) => (
-                  <div key={i} style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1.2fr 1fr',
-                    background: i % 2 === 0 ? '#F4EFE6' : '#EAE5DC', // Alternating row colors
-                    color: '#684C1B',
-                    fontFamily: F_SANS,
-                    fontSize: '13.5px',
-                    fontWeight: '600',
-                    borderBottom: i < locationItems.length - 1 ? '1px solid #D5C2A8' : 'none',
+              {/* Accordion Categories */}
+              {locationCategories.map((cat, ci) => (
+                <div key={ci}>
+                  {/* Clickable Category Header */}
+                  <button
+                    onClick={() => setOpenIdx(openIdx === ci ? -1 : ci)}
+                    style={{
+                      width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      background: '#c9a96e', color: '#fff',
+                      fontFamily: F_JOST, fontSize: '11px', fontWeight: '700',
+                      letterSpacing: '0.12em', textTransform: 'uppercase',
+                      padding: '9px 16px',
+                      borderBottom: '1px solid #D5C2A8',
+                      cursor: 'pointer', border: 'none', outline: 'none',
+                      borderBottom: openIdx === ci ? '1px solid #D5C2A8' : '1px solid #D5C2A8',
+                    }}
+                  >
+                    <span>{cat.category}</span>
+                    <svg
+                      width="14" height="14" viewBox="0 0 24 24" fill="none"
+                      stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                      style={{ transition: 'transform 0.25s', transform: openIdx === ci ? 'rotate(180deg)' : 'rotate(0deg)', flexShrink: 0 }}
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+
+                  {/* Collapsible Rows */}
+                  <div style={{
+                    overflow: 'hidden',
+                    maxHeight: openIdx === ci ? `${cat.items.length * 48}px` : '0',
+                    transition: 'max-height 0.3s ease',
                   }}>
-                    <div style={{ padding: '7px 16px', borderRight: '1px solid #D5C2A8', display: 'flex', alignItems: 'center' }}>
-                      {item.name}
-                    </div>
-                    <div style={{ padding: '7px 16px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      {item.time}
-                    </div>
+                    {cat.items.map((item, i) => (
+                      <div key={i} style={{
+                        display: 'grid', gridTemplateColumns: '1.2fr 1fr',
+                        background: i % 2 === 0 ? '#F4EFE6' : '#EAE5DC',
+                        color: '#684C1B', fontFamily: F_SANS,
+                        fontSize: '13px', fontWeight: '600',
+                        borderBottom: '1px solid #D5C2A8',
+                      }}>
+                        <div style={{ padding: '10px 16px', borderRight: '1px solid #D5C2A8', display: 'flex', alignItems: 'center' }}>
+                          {item.name}
+                        </div>
+                        <div style={{ padding: '10px 16px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          {item.dist}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
 
             </div>
           </div>

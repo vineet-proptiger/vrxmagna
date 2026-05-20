@@ -187,7 +187,7 @@ const AboutDeveloper = ({ setIsOpen }) => (
               </div>
               <div>
                 <h3 style={{ fontFamily: F_JOST, fontWeight: '800', fontSize: '18px', color: '#fff', margin: '0 0 4px', letterSpacing: '-0.01em' }}>
-                  VRX Developers
+                  Vijay Raja Homes
                 </h3>
 
               </div>
@@ -196,8 +196,12 @@ const AboutDeveloper = ({ setIsOpen }) => (
 
           {/* White Body */}
           <div style={{ padding: '24px 28px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <p style={{ color: '#555', fontFamily: F_SANS, lineHeight: 1.85, fontSize: '14px', margin: '0 0 6px' }}>
+              Vijay Raja Homes, part of the Vijay Raja Group, is a respected name in Tamil Nadu&apos;s real estate landscape. Known for delivering thoughtfully designed residential communities, the developer focuses on quality construction, smart innovation, and timely delivery.
+            </p>
             <p style={{ color: '#555', fontFamily: F_SANS, lineHeight: 1.85, fontSize: '14px', margin: '0 0 14px' }}>
-              VRX Developers is the visionary force behind VRX MAGNA, Thirumazhisai&apos;s premier smart homes gated community. With a commitment to delivering future-ready homes with world-class amenities, VRX continues to redefine smart living in Chennai through innovative design, home automation, and an unwavering commitment to quality.</p>
+              With VRX Magna, the brand reinforces its vision of creating technology-enabled, community-driven homes that offer comfort, transparency, and enduring value for homeowners and investors alike.
+            </p>
 
             {/* Stats */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', marginBottom: '22px' }}>

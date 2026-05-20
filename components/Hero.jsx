@@ -166,7 +166,7 @@ const Hero = ({ setIsOpen }) => {
             fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: '400',
             letterSpacing: '0.22em', margin: '0 0 2px',
             opacity: 0.85, textTransform: 'uppercase',
-          }}>SMART HOMES GATED COMMUNITY</p>
+          }}>Register Your Interest</p>
           <p style={{
             fontFamily: 'var(--font-jost)', fontSize: '18px', fontWeight: '700',
             letterSpacing: '0.05em', margin: '0 0 3px',
@@ -174,9 +174,31 @@ const Hero = ({ setIsOpen }) => {
           }}>VRX MAGNA</p>
           <p style={{
             fontFamily: 'var(--font-sans)', fontSize: '9px', fontWeight: '400',
-            letterSpacing: '0.2em', margin: 0,
+            letterSpacing: '0.2em', margin: '0 0 8px',
             opacity: 0.65, textTransform: 'uppercase',
-          }}>THIRUMAZHISAI, CHENNAI</p>
+          }}>Smart Luxury Homes at Thirumazhisai, Chennai</p>
+          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 8px' }}>
+            {[
+              'Modern Studio, 1 & 2 BHK Residences',
+              'Expansive 6.5-Acre Community with 76% Open Spaces',
+              '100+ Lifestyle Amenities & Smart Home Features',
+              'Strategic Growth Corridor on Poonamallee High Road',
+              'Get a Pre-Signed Rental Income of ₹15,000/- | Handing Over Soon',
+            ].map((item, i) => (
+              <li key={i} style={{
+                fontFamily: 'var(--font-sans)', fontSize: '9px', fontWeight: '400',
+                letterSpacing: '0.1em', opacity: 0.85,
+                display: 'flex', alignItems: 'center', gap: '6px',
+                marginBottom: '3px',
+              }}>
+                <span style={{ color: '#fff', fontSize: '8px' }}>▸</span>{item}
+              </li>
+            ))}
+          </ul>
+          <p style={{
+            fontFamily: 'var(--font-jost)', fontSize: '13px', fontWeight: '700',
+            letterSpacing: '0.08em', margin: 0, color: '#fff',
+          }}>₹35 L* Onwards</p>
         </div>
 
         {/* Bottom-right: CTA — cut-corner button like krisumi.com */}
@@ -211,7 +233,7 @@ const Hero = ({ setIsOpen }) => {
             transition: 'background 0.3s ease, color 0.3s ease',
             pointerEvents: 'none',
           }}>
-            MAKE AN ENQUIRY
+            BOOK A VISIT
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" strokeWidth="2.5"
               strokeLinecap="round" strokeLinejoin="round">
