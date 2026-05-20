@@ -16,7 +16,7 @@ const AboutDeveloper = dynamic(() => import('../components/AboutDeveloper'), { s
 const Footer = dynamic(() => import('../components/Footer'), { ssr: true })
 
 // const Gallery = dynamic(() => import('../components/Gallery'), { ssr: false })
-const VirtualTour = dynamic(() => import('../components/VirtualTour'), { ssr: false })
+// const VirtualTour = dynamic(() => import('../components/VirtualTour'), { ssr: false })
 const CarouselSection = dynamic(() => import('../components/CarouselSection'), { ssr: false })
 // const ExclusiveAmenities = dynamic(() => import('../components/ExclusiveAmenities'), { ssr: false })
 // const Sustainability = dynamic(() => import('../components/Sustainability'), { ssr: false })
@@ -45,7 +45,7 @@ export default function Home() {
       <MasterPlan setIsOpen={setIsOpen} />
       {/* <PaymentPlan setIsOpen={setIsOpen} /> */}
       <AboutDeveloper setIsOpen={setIsOpen} />
-      <VirtualTour setIsOpen={setIsOpen} />
+      {/* <VirtualTour setIsOpen={setIsOpen} /> */}
       <Footer />
       <EnquireModal isOpen={isOpen} setIsOpen={setIsOpen} />
 

@@ -85,9 +85,9 @@ const Pricing = ({ setIsOpen }) => {
           >
             Configurations &amp; <span style={{ color: GOLD }}>Pricing</span>
           </h2>
-          <p style={{ fontFamily: F_SANS, fontSize: "13px", color: "#6b7280", marginBottom: "4px" }}>
+          {/* <p style={{ fontFamily: F_SANS, fontSize: "13px", color: "#6b7280", marginBottom: "4px" }}>
             VRX Magna offers thoughtfully crafted homes designed for modern urban living
-          </p>
+          </p> */}
 
           <div className="w-20 h-1 mx-auto rounded-full mb-4" style={{ background: GOLD }} />
           {/* <p style={{ fontFamily: F_SANS, fontSize: "13px", color: "#6b7280", marginBottom: "4px" }}>
