@@ -103,17 +103,7 @@ const Overview = ({ setIsOpen }) => (
         With over 100 curated amenities, landscaped greens, and community-focused spaces, the development delivers a vibrant yet secure living experience. Positioned along a high-growth infrastructure corridor, VRX Magna presents a compelling opportunity for both first-time homeowners and investors seeking long-term appreciation in Chennai&rsquo;s expanding western belt.
       </p>
 
-      {/* ── RERA ── */}
-      <p style={{
-        fontFamily: F_SANS, fontSize: '13.5px', color: '#3A2A0E',
-        margin: '0 0 52px', lineHeight: 1.7,
-        letterSpacing: '0.01em',
-      }} data-aos="fade-up" data-aos-delay="140">
-        <strong style={{ fontFamily: F_JOST, letterSpacing: '0.06em', fontWeight: '700' }}>
-          RERA NO:
-        </strong>{' '}
-        TN/02/Building/0036/2021
-      </p>
+     
 
       {/* ── Info Box — thin border + L-shaped corner brackets ── */}
       <div
