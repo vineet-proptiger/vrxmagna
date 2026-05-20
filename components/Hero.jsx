@@ -109,6 +109,11 @@ const Hero = ({ setIsOpen }) => {
             bottom: auto !important;
           }
         }
+
+        @keyframes priceBlink {
+          0%, 84% { opacity: 1; }
+          85%, 100% { opacity: 0; }
+        }
       `}</style>
 
       {/* ── Image Carousel ── */}
@@ -153,7 +158,15 @@ const Hero = ({ setIsOpen }) => {
       <div className="hero-bottom-row">
 
         {/* Bottom-left: designed content block */}
-        <div style={{ color: '#fff', maxWidth: '400px' }}>
+        <div style={{
+          color: '#fff', maxWidth: '400px',
+          background: 'rgba(0,0,0,0.45)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+          borderRadius: '12px',
+          padding: '18px 20px 16px',
+          border: '1px solid rgba(255,255,255,0.08)',
+        }}>
 
           {/* Badge — above main heading */}
           <div style={{
@@ -226,7 +239,7 @@ const Hero = ({ setIsOpen }) => {
             border: '1px solid rgba(244,192,112,0.45)',
             borderRadius: '8px',
             padding: '6px 18px 6px 14px',
-            boxShadow: '0 2px 12px rgba(169,38,45,0.5)',
+            animation: 'priceBlink 2.5s step-end infinite',
           }}>
             <span style={{
               fontFamily: 'var(--font-jost)', fontSize: '20px', fontWeight: '800',

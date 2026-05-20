@@ -61,7 +61,7 @@ const Overview = ({ setIsOpen }) => (
   >
     <div className="px-4 sm:px-8" style={{
       maxWidth: '860px', margin: '0 auto',
-      textAlign: 'center',
+      textAlign: 'justify',
     }}>
 
       {/* ── Section Heading ── */}
@@ -80,25 +80,25 @@ const Overview = ({ setIsOpen }) => (
       {/* ── Paragraphs ── */}
       <p style={{
         fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
-        lineHeight: 1.9, margin: '0 0 18px',
-        maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
-        textAlign: 'justify',
+        lineHeight: 1.9,
+        marginTop: 0, marginBottom: 0, marginLeft: 'auto', marginRight: 'auto',
+        maxWidth: '680px', textAlign: 'justify',
       }} data-aos="fade-up" data-aos-delay="80">
         Vijay Raja Homes introduces VRX Magna, a thoughtfully envisioned residential enclave located in the rapidly developing neighbourhood of Thirumazhisai, Chennai. Designed as a contemporary lifestyle address, the project integrates smart living solutions, efficient space planning, and expansive green environments to create a well-balanced urban community.
       </p>
       <p style={{
         fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
-        lineHeight: 1.9, margin: '0 0 18px',
-        maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
-        textAlign: 'justify',
+        lineHeight: 1.9,
+        marginTop: 0, marginBottom: 0, marginLeft: 'auto', marginRight: 'auto',
+        maxWidth: '680px', textAlign: 'justify',
       }} data-aos="fade-up" data-aos-delay="100">
         Set across 6.5 acres with nearly 76% open space, VRX Magna offers intelligently designed Studio, 1 BHK, and 2 BHK homes that prioritise comfort, ventilation, and functionality. The architecture blends modern aesthetics with practical layouts, ensuring homes that feel open, bright, and future-ready.
       </p>
       <p style={{
         fontFamily: F_SANS, fontSize: '14.5px', color: '#4A4540',
-        lineHeight: 1.9, margin: '0 0 28px',
-        maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto',
-        textAlign: 'justify',
+        lineHeight: 1.9,
+        marginTop: 0, marginBottom: '28px', marginLeft: 'auto', marginRight: 'auto',
+        maxWidth: '680px', textAlign: 'justify',
       }} data-aos="fade-up" data-aos-delay="120">
         With over 100 curated amenities, landscaped greens, and community-focused spaces, the development delivers a vibrant yet secure living experience. Positioned along a high-growth infrastructure corridor, VRX Magna presents a compelling opportunity for both first-time homeowners and investors seeking long-term appreciation in Chennai&rsquo;s expanding western belt.
       </p>
@@ -133,7 +133,7 @@ const Overview = ({ setIsOpen }) => (
         {infoItems.map((item, i) => (
           <div key={i} className="bg-white" style={{
             padding: '26px 20px',
-            textAlign: 'center',
+            textAlign: 'justify',
           }}>
             {/* Label */}
             <p style={{
@@ -160,16 +160,8 @@ const Overview = ({ setIsOpen }) => (
       <div style={{ marginTop: '40px' }} data-aos="fade-up" data-aos-delay="260">
         <button
           onClick={() => setIsOpen && setIsOpen(true)}
-          style={{
-            display: 'inline-flex', alignItems: 'center', gap: '10px',
-            background: '#A9262D', color: '#fff',
-            fontFamily: F_JOST, fontSize: '12px', fontWeight: '700',
-            letterSpacing: '0.16em', textTransform: 'uppercase',
-            padding: '14px 32px', border: 'none', cursor: 'pointer',
-            transition: 'background 0.3s ease',
-          }}
-          onMouseEnter={e => e.currentTarget.style.background = '#8a1e24'}
-          onMouseLeave={e => e.currentTarget.style.background = '#A9262D'}
+          className="btn-brand"
+          style={{ fontFamily: F_JOST, fontSize: '12px', letterSpacing: '0.16em' }}
         >
           Request A Brochure
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"

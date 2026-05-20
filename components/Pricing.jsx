@@ -7,7 +7,7 @@ const PRIMARY = "var(--color-primary)";
 const units = [
   {
     type: "Studio Apartments",
-    size: "259 TO 309 Sq.Ft",
+    size: "On Request",
     price: "Price On Request",
     oldPrice: null,
     btnText: "Get Cost Sheet",
@@ -22,7 +22,7 @@ const units = [
   },
   {
     type: "1 BHK Residences",
-    size: "422 TO 535 Sq.Ft",
+    size: "On Request",
     price: "Price On Request",
     oldPrice: null,
     btnText: "Get Cost Sheet",
@@ -37,7 +37,7 @@ const units = [
   },
   {
     type: "2 BHK Residences",
-    size: "567 TO 575 Sq.Ft",
+    size: "On Request",
     price: "Price On Request",
     oldPrice: null,
     btnText: "Get Cost Sheet",
@@ -158,7 +158,7 @@ const Pricing = ({ setIsOpen }) => {
                 </div>
 
                 <div className="space-y-3 mb-8">
-                  {unit.features.map((feature, fIdx) => (
+                  {['Limited Launch Inventory', 'Attractive Payment Plan', 'Premium Residence'].map((feature, fIdx) => (
                     <div key={fIdx} className="flex items-start gap-3">
                       <div className="mt-1 flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center bg-amber-50">
                         <Check size={12} strokeWidth={3} style={{ color: GOLD }} />
