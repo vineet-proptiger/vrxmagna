@@ -163,21 +163,21 @@ const Hero = ({ setIsOpen }) => {
               stroke="rgba(255,255,255,0.4)" strokeWidth="1.2" fill="none" strokeLinecap="round" />
           </svg>
           <p style={{
-            fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: '400',
-            letterSpacing: '0.22em', margin: '0 0 2px',
-            opacity: 0.85, textTransform: 'uppercase',
+            fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: '400',
+            letterSpacing: '0.18em', margin: '0 0 4px',
+            opacity: 0.9, textTransform: 'uppercase',
           }}>Register Your Interest</p>
           <p style={{
-            fontFamily: 'var(--font-jost)', fontSize: '18px', fontWeight: '700',
-            letterSpacing: '0.05em', margin: '0 0 3px',
+            fontFamily: 'var(--font-jost)', fontSize: '32px', fontWeight: '700',
+            letterSpacing: '0.05em', margin: '0 0 6px',
             textTransform: 'uppercase', lineHeight: 1.1,
           }}>VRX MAGNA</p>
           <p style={{
-            fontFamily: 'var(--font-sans)', fontSize: '9px', fontWeight: '400',
-            letterSpacing: '0.2em', margin: '0 0 8px',
-            opacity: 0.65, textTransform: 'uppercase',
+            fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: '400',
+            letterSpacing: '0.12em', margin: '0 0 12px',
+            opacity: 0.8, textTransform: 'uppercase',
           }}>Smart Luxury Homes at Thirumazhisai, Chennai</p>
-          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 8px' }}>
+          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 12px' }}>
             {[
               'Modern Studio, 1 & 2 BHK Residences',
               'Expansive 6.5-Acre Community with 76% Open Spaces',
@@ -186,17 +186,17 @@ const Hero = ({ setIsOpen }) => {
               'Get a Pre-Signed Rental Income of ₹15,000/- | Handing Over Soon',
             ].map((item, i) => (
               <li key={i} style={{
-                fontFamily: 'var(--font-sans)', fontSize: '9px', fontWeight: '400',
-                letterSpacing: '0.1em', opacity: 0.85,
-                display: 'flex', alignItems: 'center', gap: '6px',
-                marginBottom: '3px',
+                fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: '400',
+                letterSpacing: '0.04em', opacity: 0.95,
+                display: 'flex', alignItems: 'center', gap: '8px',
+                marginBottom: '6px',
               }}>
-                <span style={{ color: '#fff', fontSize: '8px' }}>▸</span>{item}
+                <span style={{ color: '#fff', fontSize: '11px' }}>▸</span>{item}
               </li>
             ))}
           </ul>
           <p style={{
-            fontFamily: 'var(--font-jost)', fontSize: '13px', fontWeight: '700',
+            fontFamily: 'var(--font-jost)', fontSize: '20px', fontWeight: '700',
             letterSpacing: '0.08em', margin: 0, color: '#fff',
           }}>₹35 L* Onwards</p>
         </div>
