@@ -152,32 +152,54 @@ const Hero = ({ setIsOpen }) => {
       {/* ── Bottom row: left identity + right CTA ── */}
       <div className="hero-bottom-row">
 
-        {/* Bottom-left: wave + project name */}
-        <div style={{ color: '#fff' }}>
-          {/* Wave lines */}
-          <svg width="52" height="22" viewBox="0 0 52 22" fill="none"
-            style={{ display: 'block', marginBottom: '8px' }}>
-            <path d="M2 16 Q10 4 18 16 Q26 28 34 16 Q42 4 50 16"
-              stroke="white" strokeWidth="1.8" fill="none" strokeLinecap="round" />
-            <path d="M6 20 Q14 11 22 20 Q30 29 38 20 Q44 13 50 20"
-              stroke="rgba(255,255,255,0.4)" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-          </svg>
+        {/* Bottom-left: designed content block */}
+        <div style={{ color: '#fff', maxWidth: '400px' }}>
+
+          {/* Badge — above main heading */}
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '7px',
+            background: 'linear-gradient(135deg, #A9262D 0%, #c9362e 100%)',
+            border: '1px solid rgba(244,192,112,0.45)',
+            borderRadius: '50px',
+            padding: '6px 16px 6px 11px',
+            marginBottom: '12px',
+            boxShadow: '0 2px 12px rgba(169,38,45,0.5)',
+          }}>
+            <span style={{
+              width: '7px', height: '7px', borderRadius: '50%',
+              background: '#f4c070', flexShrink: 0,
+              boxShadow: '0 0 6px #f4c070',
+            }} />
+            <span style={{
+              fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: '700',
+              letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff',
+            }}>Register Your Interest</span>
+          </div>
+
+          {/* Main Heading */}
           <p style={{
-            fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: '400',
-            letterSpacing: '0.18em', margin: '0 0 4px',
-            opacity: 0.9, textTransform: 'uppercase',
-          }}>Register Your Interest</p>
-          <p style={{
-            fontFamily: 'var(--font-jost)', fontSize: '32px', fontWeight: '700',
-            letterSpacing: '0.05em', margin: '0 0 6px',
-            textTransform: 'uppercase', lineHeight: 1.1,
+            fontFamily: 'var(--font-jost)', fontSize: '36px', fontWeight: '800',
+            letterSpacing: '0.04em', margin: '0 0 4px',
+            textTransform: 'uppercase', lineHeight: 1.05,
+            textShadow: '0 2px 12px rgba(0,0,0,0.4)',
           }}>VRX MAGNA</p>
+
+          {/* Divider line */}
+          <div style={{
+            width: '48px', height: '2px', borderRadius: '2px',
+            background: 'linear-gradient(90deg, #f4c070, rgba(244,192,112,0.3))',
+            margin: '8px 0 10px',
+          }} />
+
+          {/* Subtitle */}
           <p style={{
-            fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: '400',
-            letterSpacing: '0.12em', margin: '0 0 12px',
-            opacity: 0.8, textTransform: 'uppercase',
+            fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: '500',
+            letterSpacing: '0.14em', margin: '0 0 14px',
+            opacity: 0.78, textTransform: 'uppercase',
           }}>Smart Luxury Homes at Thirumazhisai, Chennai</p>
-          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 12px' }}>
+
+          {/* Bullet list */}
+          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 14px' }}>
             {[
               'Modern Studio, 1 & 2 BHK Residences',
               'Expansive 6.5-Acre Community with 76% Open Spaces',
@@ -186,19 +208,35 @@ const Hero = ({ setIsOpen }) => {
               'Get a Pre-Signed Rental Income of ₹15,000/- | Handing Over Soon',
             ].map((item, i) => (
               <li key={i} style={{
-                fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: '400',
-                letterSpacing: '0.04em', opacity: 0.95,
-                display: 'flex', alignItems: 'center', gap: '8px',
-                marginBottom: '6px',
+                fontFamily: 'var(--font-sans)', fontSize: '12.5px', fontWeight: '400',
+                letterSpacing: '0.03em', opacity: 0.9,
+                display: 'flex', alignItems: 'flex-start', gap: '9px',
+                marginBottom: '6px', lineHeight: 1.4,
               }}>
-                <span style={{ color: '#fff', fontSize: '11px' }}>▸</span>{item}
+                <span style={{ color: '#f4c070', fontSize: '10px', marginTop: '3px', flexShrink: 0 }}>▸</span>
+                {item}
               </li>
             ))}
           </ul>
-          <p style={{
-            fontFamily: 'var(--font-jost)', fontSize: '20px', fontWeight: '700',
-            letterSpacing: '0.08em', margin: 0, color: '#fff',
-          }}>₹35 L* Onwards</p>
+
+          {/* Price */}
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: 'linear-gradient(135deg, #A9262D 0%, #c9362e 100%)',
+            border: '1px solid rgba(244,192,112,0.45)',
+            borderRadius: '8px',
+            padding: '6px 18px 6px 14px',
+            boxShadow: '0 2px 12px rgba(169,38,45,0.5)',
+          }}>
+            <span style={{
+              fontFamily: 'var(--font-jost)', fontSize: '20px', fontWeight: '800',
+              letterSpacing: '0.05em', color: '#fff',
+            }}>₹35 L*</span>
+            <span style={{
+              fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: '600',
+              letterSpacing: '0.12em', color: '#fff', textTransform: 'uppercase',
+            }}>Onwards</span>
+          </div>
         </div>
 
         {/* Bottom-right: CTA — cut-corner button like krisumi.com */}
