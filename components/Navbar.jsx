@@ -147,22 +147,24 @@ const Navbar = ({ setIsOpen }) => {
             >{label}</a>
           ))}
           {/* Mobile drawer call CTA */}
-          <div style={{ padding: '16px 24px', borderBottom: '1px solid #f5f5f5' }}>
+          <div style={{ padding: '16px 24px', borderBottom: '1px solid #f5f5f5', display: 'flex', justifyContent: 'center' }}>
             <a href="tel:9718344024" style={{
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '10px',
+              gap: '8px',
               background: 'var(--color-brand)',
               color: '#fff',
-              padding: '12px',
-              borderRadius: '8px',
+              padding: '8px 20px',
+              borderRadius: '50px',
               fontFamily: F_JOST,
-              fontSize: '15px',
+              fontSize: '13px',
               fontWeight: '700',
+              letterSpacing: '0.04em',
               textDecoration: 'none',
               transition: 'all 0.3s ease',
               border: '2px solid transparent',
+              boxShadow: '0 4px 12px rgba(169, 38, 45, 0.15)',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = '#ffffff';
@@ -175,7 +177,7 @@ const Navbar = ({ setIsOpen }) => {
               e.currentTarget.style.borderColor = 'transparent';
             }}
             >
-              <Phone size={17} fill="currentColor" />
+              <Phone size={15} fill="currentColor" />
               9718344024
             </a>
           </div>
