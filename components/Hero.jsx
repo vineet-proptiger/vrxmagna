@@ -21,7 +21,7 @@ const Hero = ({ setIsOpen }) => {
           position: relative;
           margin-top: 80px;
           height: auto;
-          aspect-ratio: 1600/650;
+          aspect-ratio: 3959/1875;
           overflow: hidden;
           background: transparent;
           display: block;
@@ -85,7 +85,7 @@ const Hero = ({ setIsOpen }) => {
           .hero-carousel {
             position: relative !important;
             width: 100% !important;
-            aspect-ratio: 1600/650 !important;
+            aspect-ratio: 3959/1875 !important;
             height: auto !important;
             inset: auto !important;
           }
@@ -126,7 +126,7 @@ const Hero = ({ setIsOpen }) => {
               src={src}
               alt={`VRX MAGNA ${idx + 1}`}
               fill
-              className="object-fill"
+              className="object-cover"
               priority={idx === 0}
               sizes="100vw"
             />
