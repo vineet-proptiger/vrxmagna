@@ -51,9 +51,9 @@ const MasterPlan = ({ setIsOpen }) => {
           {/* LEFT — Tabs */}
           <div className="w-full lg:w-[32%]" data-aos="fade-right">
             <div style={{
-              background: '#fff', borderRadius: '16px',
+              background: '#fff', borderRadius: '8px',
               boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
-              border: '1px solid #f0f0f0', overflow: 'hidden',
+              border: '1px solid #D5C2A8', overflow: 'hidden',
             }}>
               {/* Tab header */}
               <div style={{
@@ -146,8 +146,8 @@ const MasterPlan = ({ setIsOpen }) => {
           {/* RIGHT — Image preview */}
           <div className="w-full lg:flex-1" data-aos="zoom-in">
             <div style={{
-              position: 'relative', borderRadius: '16px', overflow: 'hidden',
-              border: '2px solid var(--color-gold)',
+              position: 'relative', borderRadius: '8px', overflow: 'hidden',
+              border: '1px solid #D5C2A8',
               boxShadow: '0 10px 36px var(--color-shadow-inner)',
               height: '100%', minHeight: '400px',
             }}>

@@ -104,8 +104,7 @@ const Pricing = ({ setIsOpen }) => {
               key={idx}
               data-aos="fade-up"
               data-aos-delay={idx * 150}
-              className={`group pricing-card relative bg-white rounded-2xl overflow-hidden border-2 transition-all duration-500 ${unit.isPopular ? "lg:scale-105 z-20" : "z-10"}`}
-              style={{ borderColor: GOLD }}
+              className={`group pricing-card relative bg-white rounded-lg overflow-hidden border border-[#D5C2A8] transition-all duration-500 ${unit.isPopular ? "lg:scale-105 z-20" : "z-10"}`}
             >
               {unit.isPopular && (
                 <div
