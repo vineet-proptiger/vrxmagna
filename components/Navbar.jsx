@@ -70,7 +70,7 @@ const Navbar = ({ setIsOpen }) => {
           style={{ alignItems: 'center', gap: '36px', marginLeft: '52px' }}
         >
           <a href="#amenities" style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>AMENITIES</a>
-          <a href="#gallery" style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>GALLERY</a>
+          <a href="#homes-designed" style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>GALLERY</a>
         </div>
 
         {/* MOBILE: hamburger pushed to right */}
@@ -95,7 +95,7 @@ const Navbar = ({ setIsOpen }) => {
             { label: 'HOME',       href: '#'        },
             { label: 'ABOUT US',   href: '#overview' },
             { label: 'AMENITIES',  href: '#amenities' },
-            { label: 'GALLERY',    href: '#gallery' },
+            { label: 'GALLERY',    href: '#homes-designed' },
           ].map(({ label, href }, i) => (
             <a key={i} href={href}
               onClick={() => setMobileOpen(false)}

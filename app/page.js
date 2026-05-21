@@ -34,7 +34,7 @@ export default function Home() {
       <Hero setIsOpen={setIsOpen} />
       <Overview setIsOpen={setIsOpen} />
       <Highlights setIsOpen={setIsOpen} />
-      <Gallery setIsOpen={setIsOpen} />
+      {/* <Gallery setIsOpen={setIsOpen} /> */}
       <CarouselSection setIsOpen={setIsOpen} />
       <Amenities setIsOpen={setIsOpen} />
       {/* <ExclusiveAmenities /> */}
