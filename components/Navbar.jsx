@@ -176,7 +176,7 @@ const Navbar = ({ setIsOpen }) => {
             }}
             >
               <Phone size={17} fill="currentColor" />
-              Call Now: 9718344024
+              9718344024
             </a>
           </div>
         </div>
