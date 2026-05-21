@@ -20,10 +20,10 @@ const Hero = ({ setIsOpen }) => {
         .hero-container {
           position: relative;
           margin-top: 80px;
-          height: max(calc(100vh - 80px), 56.25vw);
-          min-height: 520px;
+          height: auto;
+          aspect-ratio: 1600/837;
           overflow: hidden;
-          background: #1a1a1a;
+          background: transparent;
           display: block;
         }
 
@@ -74,15 +74,16 @@ const Hero = ({ setIsOpen }) => {
             padding-top: 80px !important;
             height: auto !important;
             min-height: auto !important;
+            aspect-ratio: auto !important;
             display: flex !important;
             flex-direction: column !important;
-            background: #111827 !important;
+            background: transparent !important;
           }
 
           .hero-carousel {
             position: relative !important;
             width: 100% !important;
-            aspect-ratio: 16/9 !important;
+            aspect-ratio: 1600/837 !important;
             height: auto !important;
             inset: auto !important;
           }
@@ -101,12 +102,7 @@ const Hero = ({ setIsOpen }) => {
           }
 
           .hero-dots {
-            position: static !important;
-            transform: none !important;
-            justify-content: center !important;
-            padding: 12px 0 0 !important;
-            background: #111827 !important;
-            bottom: auto !important;
+            display: none !important;
           }
         }
 
@@ -128,7 +124,7 @@ const Hero = ({ setIsOpen }) => {
               src={src}
               alt={`VRX MAGNA ${idx + 1}`}
               fill
-              className="object-cover"
+              className="object-contain"
               priority={idx === 0}
               sizes="100vw"
             />
@@ -137,9 +133,10 @@ const Hero = ({ setIsOpen }) => {
       </div>
 
       {/* ── Brand red gradient at bottom — matches krisumi.com ── */}
-      <div className="hero-gradient" />
+      {false && <div className="hero-gradient" />}
 
       {/* ── Dot indicators ── */}
+      {false && (
       <div className="hero-dots">
         {slides.map((_, idx) => (
           <button key={idx} onClick={() => setCurrent(idx)} style={{
@@ -153,8 +150,10 @@ const Hero = ({ setIsOpen }) => {
           }} />
         ))}
       </div>
+      )}
 
       {/* ── Bottom row: left identity + right CTA ── */}
+      {false && (
       <div className="hero-bottom-row">
 
         {/* Bottom-left: designed content block */}
@@ -294,6 +293,7 @@ const Hero = ({ setIsOpen }) => {
           </div>
         </div>
       </div>
+      )}
     </section>
   )
 }
