@@ -14,29 +14,19 @@ const ArcIcon = () => (
 
 const CarouselSection = ({ setIsOpen }) => {
   const [index, setIndex] = useState(0)
-  const [prevIndex, setPrevIndex] = useState(null)
 
   const nextSlide = () => {
-    setIndex((prev) => {
-      setPrevIndex(prev)
-      return (prev + 1) % galleryImages.length
-    })
+    setIndex((prev) => (prev + 1) % galleryImages.length)
   }
 
   const prevSlide = () => {
-    setIndex((prev) => {
-      setPrevIndex(prev)
-      return (prev - 1 + galleryImages.length) % galleryImages.length
-    })
+    setIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
   }
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 3000)
+    const timer = setInterval(nextSlide, 4000) // Changed to 4s for comfortable viewing
     return () => clearInterval(timer)
   }, [])
-
-  const currentImage = galleryImages[index]
-  const previousImage = prevIndex !== null ? galleryImages[prevIndex] : null
 
   return (
     <section id="homes-designed" style={{
@@ -76,7 +66,7 @@ const CarouselSection = ({ setIsOpen }) => {
             }}>
               <button onClick={prevSlide} style={{
                 width: '46px', height: '44px', background: '#fff', color: '#684C1B',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                display: 'flex', alignItems: 'center', justify: 'center',
                 borderRight: '1px solid #D5C2A8', cursor: 'pointer', transition: 'background 0.2s'
               }} onMouseEnter={e => e.currentTarget.style.background = '#fef9f0'} onMouseLeave={e => e.currentTarget.style.background = '#fff'}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -86,7 +76,7 @@ const CarouselSection = ({ setIsOpen }) => {
               </button>
               <button onClick={nextSlide} style={{
                 width: '46px', height: '44px', background: '#fff', color: '#684C1B',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                display: 'flex', alignItems: 'center', justify: 'center',
                 cursor: 'pointer', transition: 'background 0.2s'
               }} onMouseEnter={e => e.currentTarget.style.background = '#fef9f0'} onMouseLeave={e => e.currentTarget.style.background = '#fff'}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -98,36 +88,31 @@ const CarouselSection = ({ setIsOpen }) => {
           </div>
         </div>
 
-        {/* ── Main Single Image ── */}
-        <style>{`
-          @keyframes slideInFromRight {
-            from { transform: translateX(100%); }
-            to   { transform: translateX(0); }
-          }
-          @keyframes slideOutToLeft {
-            from { transform: translateX(0); }
-            to   { transform: translateX(-100%); }
-          }
-          .slide-in  { animation: slideInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-          .slide-out { animation: slideOutToLeft  0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-        `}</style>
-        <div className="relative w-full aspect-[16/8] min-h-[400px] bg-gray-100 overflow-hidden">
-          {/* Previous image slides out to the left */}
-          {previousImage && (
-            <div key={`prev-${prevIndex}`} className="slide-out absolute inset-0">
-              <Image src={previousImage.src} alt="" fill className="object-cover" />
-            </div>
-          )}
-          {/* New image slides in from the right */}
-          <div key={`curr-${index}`} className="slide-in absolute inset-0">
-            <Image
-              src={currentImage.src}
-              alt={currentImage.alt || 'Gallery Image'}
-              fill
-              className="object-cover"
-            />
+        {/* ── Main Sliding Track Gallery (Premium & Zero-Flash) ── */}
+        <div className="relative w-full aspect-[16/8] min-h-[350px] md:min-h-[450px] lg:min-h-[550px] bg-gray-100 overflow-hidden rounded-lg shadow-md">
+          <div 
+            className="flex h-full w-full transition-transform duration-700 cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+            style={{ 
+              transform: `translateX(-${index * 100}%)`,
+              willChange: 'transform'
+            }}
+          >
+            {galleryImages.map((img, idx) => (
+              <div 
+                key={idx} 
+                className="relative min-w-full h-full flex-shrink-0"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt || `Gallery Image ${idx + 1}`}
+                  fill
+                  priority={idx === 0 || idx === 1 || Math.abs(idx - index) <= 1} // Preload active and adjacent images for instant rendering
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                  className="object-cover select-none pointer-events-none"
+                />
+              </div>
+            ))}
           </div>
-
         </div>
 
       </div>
