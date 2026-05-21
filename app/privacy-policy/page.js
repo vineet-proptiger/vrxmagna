@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
 
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[80px]">
           <Link href="/" className="flex items-center">
-            <img src={logoImages.tarc} alt="VRX MAGNA" className="h-20 sm:h-24 w-auto object-contain" style={{ maxWidth: '350px' }} />
+            <img src={logoImages.tarc} alt="VRX MAGNA" style={{ height: '50px', width: 'auto', display: 'block' }} />
           </Link>
           <Link
             href="/"
@@ -88,14 +88,12 @@ export default function PrivacyPolicy() {
             {/* Intro */}
             <p className="mb-6 sm:mb-8 text-sm sm:text-base" style={{ lineHeight: 1.8, color: '#444', fontFamily: 'var(--font-jost), Jost, sans-serif' }}>
               At{' '}
-              <a
-                href="https://vrxmagna.in/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/"
                 style={{ color: 'var(--color-gold-dark)', fontWeight: '600' }}
               >
                 vrxmagna.in
-              </a>{' '}
+              </Link>{' '}
               (Authorized Marketing Partner), we respect your privacy and are committed to safeguarding your personal data. This Privacy Policy outlines how we collect, use, and protect your information when you visit our website.
             </p>
 
