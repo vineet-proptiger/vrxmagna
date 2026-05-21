@@ -24,9 +24,9 @@ const CarouselSection = ({ setIsOpen }) => {
   }
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 4000) // Changed to 4s for comfortable viewing
+    const timer = setInterval(nextSlide, 4000) // Autoplay every 4s
     return () => clearInterval(timer)
-  }, [])
+  }, [index])
 
   return (
     <section id="homes-designed" style={{
