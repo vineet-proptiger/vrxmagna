@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 import { logoImages } from '../lib/images'
 
 const NAV_TEXT = '#684C1B'
@@ -44,6 +44,7 @@ const Navbar = ({ setIsOpen }) => {
         justifyContent: 'center',
         padding: '0 32px',
         gap: '0',
+        position: 'relative',
       }}>
 
         {/* LEFT LINKS */}
@@ -71,6 +72,44 @@ const Navbar = ({ setIsOpen }) => {
         >
           <a href="#amenities" style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>AMENITIES</a>
           <a href="#homes-designed" style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>GALLERY</a>
+        </div>
+
+        {/* DESKTOP PHONE BUTTON — Far Right */}
+        <div className="hidden lg:flex" style={{ position: 'absolute', right: '32px' }}>
+          <a href="tel:9718344024" style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: 'var(--color-brand)',
+            color: '#fff',
+            padding: '9px 22px',
+            borderRadius: '50px',
+            fontFamily: F_JOST,
+            fontSize: '14px',
+            fontWeight: '700',
+            letterSpacing: '0.04em',
+            transition: 'all 0.3s ease',
+            boxShadow: '0 4px 12px rgba(169, 38, 45, 0.2)',
+            border: '2px solid transparent',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = '#ffffff';
+            e.currentTarget.style.color = 'var(--color-brand)';
+            e.currentTarget.style.borderColor = 'var(--color-brand)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 6px 16px rgba(169, 38, 45, 0.25)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'var(--color-brand)';
+            e.currentTarget.style.color = '#fff';
+            e.currentTarget.style.borderColor = 'transparent';
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(169, 38, 45, 0.2)';
+          }}
+          >
+            <Phone size={15} fill="currentColor" />
+            9718344024
+          </a>
         </div>
 
         {/* MOBILE: hamburger pushed to right */}
@@ -107,6 +146,39 @@ const Navbar = ({ setIsOpen }) => {
               }}
             >{label}</a>
           ))}
+          {/* Mobile drawer call CTA */}
+          <div style={{ padding: '16px 24px', borderBottom: '1px solid #f5f5f5' }}>
+            <a href="tel:9718344024" style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '10px',
+              background: 'var(--color-brand)',
+              color: '#fff',
+              padding: '12px',
+              borderRadius: '8px',
+              fontFamily: F_JOST,
+              fontSize: '15px',
+              fontWeight: '700',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease',
+              border: '2px solid transparent',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#ffffff';
+              e.currentTarget.style.color = 'var(--color-brand)';
+              e.currentTarget.style.borderColor = 'var(--color-brand)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'var(--color-brand)';
+              e.currentTarget.style.color = '#fff';
+              e.currentTarget.style.borderColor = 'transparent';
+            }}
+            >
+              <Phone size={17} fill="currentColor" />
+              Call Now: 9718344024
+            </a>
+          </div>
         </div>
       )}
     </nav>
