@@ -147,7 +147,7 @@ const Overview = ({ setIsOpen }) => (
       </div>
 
       {/* ── Request A Brochure CTA ── */}
-      <div style={{ marginTop: '40px' }} data-aos="fade-up" data-aos-delay="260">
+      <div className="flex justify-center sm:justify-start" style={{ marginTop: '40px' }} data-aos="fade-up" data-aos-delay="260">
         <button
           onClick={() => setIsOpen && setIsOpen(true)}
           className="btn-brand"
