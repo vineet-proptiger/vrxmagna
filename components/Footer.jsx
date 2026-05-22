@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 
+
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 
@@ -45,3 +46,4 @@ const Footer = () => (
 )
 
 export default Footer
+
