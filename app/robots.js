@@ -5,7 +5,7 @@ export default function robots() {
       allow: '/',
       disallow: '',
     },
-    sitemap: 'https://vrxmagna.in/sitemap.xml',
+    sitemap: 'https://vrxmagnathirumazhisai.in/sitemap.xml',
   }
 }
 

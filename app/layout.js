@@ -50,11 +50,11 @@ export default function RootLayout({ children }) {
               "@type": "Article",
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://vrxmagna.in/"
+                "@id": "https://vrxmagnathirumazhisai.in/"
               },
               "headline": "VRX MAGNA | Studio, 1 BHK & 2 BHK Smart Homes in Thirumazhisai, Chennai",
               "description": "VRX MAGNA, Thirumazhisai's premier smart homes gated community with 437 units, 100 amenities, home automation. Apartments starting from ₹35 Lakhs. RERA: TN/02/Building/0036/2021.",
-              "image": "https://vrxmagna.in/_next/image?url=%2Fimages%2Fhero%2Fbanner1.webp&w=1200&q=75",
+              "image": "https://vrxmagnathirumazhisai.in/_next/image?url=%2Fimages%2Fhero%2Fbanner1.webp&w=1200&q=75",
               "author": {
                 "@type": "Organization",
                 "name": "Proptiger Marketing Services Pvt Ltd",

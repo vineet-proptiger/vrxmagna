@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const base = 'https://vrxmagna.in'
+  const base = 'https://vrxmagnathirumazhisai.in'
 
   return [
     {
