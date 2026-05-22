@@ -3,16 +3,17 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { heroImages } from '../lib/images'
 
-const slides = [heroImages.banner, heroImages.banner2]
+// Carousel disabled in favor of device-optimized static banners
+// const slides = [heroImages.banner, heroImages.banner2]
 
 const Hero = ({ setIsOpen }) => {
-  const [current, setCurrent] = useState(0)
+  // const [current, setCurrent] = useState(0)
   const [hovered, setHovered] = useState(false)
 
-  useEffect(() => {
-    const timer = setInterval(() => setCurrent(prev => (prev + 1) % slides.length), 5000)
-    return () => clearInterval(timer)
-  }, [])
+  // useEffect(() => {
+  //   const timer = setInterval(() => setCurrent(prev => (prev + 1) % slides.length), 5000)
+  //   return () => clearInterval(timer)
+  // }, [])
 
   return (
     <section className="hero-container">
@@ -21,7 +22,7 @@ const Hero = ({ setIsOpen }) => {
           position: relative;
           margin-top: 80px;
           height: auto;
-          aspect-ratio: 3959/1875;
+          aspect-ratio: 16/7; /* Shorter desktop aspect ratio to fit within 1 viewport height */
           overflow: hidden;
           background: transparent;
           display: block;
@@ -68,7 +69,13 @@ const Hero = ({ setIsOpen }) => {
           bottom: 80px;
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .hero-container {
+            aspect-ratio: 4/3 !important; /* Shorter tablet aspect ratio (4:3) to fit viewport perfectly */
+          }
+        }
+
+        @media (max-width: 767px) {
           .hero-container {
             margin-top: 0px !important;
             padding-top: 80px !important;
@@ -85,7 +92,7 @@ const Hero = ({ setIsOpen }) => {
           .hero-carousel {
             position: relative !important;
             width: 100% !important;
-            aspect-ratio: 3959/1875 !important;
+            aspect-ratio: 3/4 !important; /* Shorter mobile aspect ratio (3:4) to fit viewport perfectly */
             height: auto !important;
             inset: auto !important;
           }
@@ -114,24 +121,40 @@ const Hero = ({ setIsOpen }) => {
         }
       `}</style>
 
-      {/* ── Image Carousel ── */}
-      <div className="hero-carousel">
-        {slides.map((src, idx) => (
-          <div key={idx} style={{
-            position: 'absolute', inset: 0,
-            opacity: current === idx ? 1 : 0,
-            transition: 'opacity 1s ease',
-          }}>
-            <Image
-              src={src}
-              alt={`VRX MAGNA ${idx + 1}`}
-              fill
-              className="object-cover"
-              priority={idx === 0}
-              sizes="100vw"
-            />
-          </div>
-        ))}
+      {/* ── Desktop Banner (lg:block, hidden on tablet and mobile) ── */}
+      <div className="hidden lg:block hero-carousel">
+        <Image
+          src={heroImages.banner1Desk}
+          alt="VRX MAGNA Desktop Banner"
+          fill
+          className="object-fill"
+          priority
+          sizes="100vw"
+        />
+      </div>
+
+      {/* ── Tablet Banner (md:block, hidden on mobile and desktop) ── */}
+      <div className="hidden md:block lg:hidden hero-carousel">
+        <Image
+          src={heroImages.banner1tab}
+          alt="VRX MAGNA Tablet Banner"
+          fill
+          className="object-fill"
+          priority
+          sizes="100vw"
+        />
+      </div>
+
+      {/* ── Mobile Banner (block, hidden on tablet and desktop) ── */}
+      <div className="block md:hidden hero-carousel">
+        <Image
+          src={heroImages.bnnner1sm}
+          alt="VRX MAGNA Mobile Banner"
+          fill
+          className="object-fill"
+          priority
+          sizes="100vw"
+        />
       </div>
 
       {/* ── Brand red gradient at bottom — matches krisumi.com ── */}
