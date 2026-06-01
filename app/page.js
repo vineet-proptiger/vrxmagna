@@ -13,6 +13,7 @@ const Location = dynamic(() => import('../components/Location'), { ssr: true })
 const MasterPlan = dynamic(() => import('../components/MasterPlan'), { ssr: true })
 // const PaymentPlan = dynamic(() => import('../components/PaymentPlan'), { ssr: true })
 const AboutDeveloper = dynamic(() => import('../components/AboutDeveloper'), { ssr: true })
+const QuickChat = dynamic(() => import('../components/QuickChat'), { ssr: true })
 const Footer = dynamic(() => import('../components/Footer'), { ssr: true })
 
 const Gallery = dynamic(() => import('../components/Gallery'), { ssr: false })
@@ -46,6 +47,7 @@ export default function Home() {
       {/* <PaymentPlan setIsOpen={setIsOpen} /> */}
       <AboutDeveloper setIsOpen={setIsOpen} />
       {/* <VirtualTour setIsOpen={setIsOpen} /> */}
+      <QuickChat />
       <Footer />
       <EnquireModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
