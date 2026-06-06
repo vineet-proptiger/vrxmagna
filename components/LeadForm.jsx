@@ -24,7 +24,6 @@ const LeadForm = ({ formName = 'Hero Form', btnText = 'Submit Details' }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!/^\d{10}$/.test(formData.phone)) { setError('Please enter a valid 10-digit mobile number.'); return }
-    if (typeof window !== 'undefined' && localStorage.getItem('_lsub_done') === '1') { setSuccess(true); return }
     setError(''); setLoading(true)
     const tracking = buildTrackingFields()
     const payload = new FormData()

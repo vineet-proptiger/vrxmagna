@@ -22,7 +22,6 @@ const ContactCTA = () => {
   const submit = async (e) => {
     e.preventDefault()
     if (!/^\d{10}$/.test(form.phone)) { setError('Enter valid 10-digit number'); return }
-    if (typeof window !== 'undefined' && localStorage.getItem('_lsub_done') === '1') { setSuccess(true); return }
     setError(''); setLoading(true)
     const tracking = buildTrackingFields()
     const payload = new FormData()
